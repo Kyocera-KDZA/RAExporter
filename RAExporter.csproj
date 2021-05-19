@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{11A13AAA-AE88-43A3-B911-AEA48EEFA578}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RAExporter</RootNamespace>
+    <AssemblyName>RAExporter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>true</Optimize>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.LFSO104Lib, Version=10.4.0.0, Culture=neutral, PublicKeyToken=607dd73ee2bd1c00, processorArchitecture=x86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Laserfiche.DocumentServices, Version=10.4.0.0, Culture=neutral, PublicKeyToken=3f98b3eaee6c16a6, processorArchitecture=MSIL" />
+    <Reference Include="Laserfiche.RepositoryAccess, Version=9.1.0.0, Culture=neutral, PublicKeyToken=3f98b3eaee6c16a6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(CommonProgramFiles)\Laserfiche\Workflow\9.1\Laserfiche.RepositoryAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.LFSO83Lib, Version=8.3.0.0, Culture=neutral, PublicKeyToken=607dd73ee2bd1c00, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(CommonProgramFiles)\Laserfiche\Workflow\Interop.LFSO83Lib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Interop.LFSO90Lib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=607dd73ee2bd1c00, processorArchitecture=x86">
+      <HintPath>$(CommonProgramFiles)\Laserfiche\Workflow\Interop.LFSO90Lib.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Laserfiche.Base, Version=9.0.0.0, Culture=neutral, PublicKeyToken=607dd73ee2bd1c00, processorArchitecture=MSIL" />
+    <Reference Include="Laserfiche.Project, Version=9.0.0.0, Culture=neutral, PublicKeyToken=607dd73ee2bd1c00, processorArchitecture=MSIL" />
+    <Reference Include="Laserfiche.Workflow.Activities.Custom, Version=8.3.0.0, Culture=neutral, PublicKeyToken=d8428ff9263e6cda, processorArchitecture=MSIL">
+      <HintPath>$(CommonProgramFiles)\Laserfiche\Workflow\Laserfiche.Workflow.Activities.Custom.dll</HintPath>
+    </Reference>
+    <Reference Include="Laserfiche.Workflow.Activity.Base, Version=8.3.0.0, Culture=neutral, PublicKeyToken=d8428ff9263e6cda, processorArchitecture=MSIL">
+      <HintPath>$(CommonProgramFiles)\Laserfiche\Workflow\Laserfiche.Workflow.Activity.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Laserfiche.Workflow.Designer.Base, Version=8.3.0.0, Culture=neutral, PublicKeyToken=d8428ff9263e6cda, processorArchitecture=MSIL">
+      <HintPath>$(CommonProgramFiles)\Laserfiche\Workflow\Laserfiche.Workflow.Designer.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Laserfiche.Workflow.Lfso, Version=8.3.0.0, Culture=neutral, PublicKeyToken=d8428ff9263e6cda, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="RAExporterActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RAExporterActivityProxy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
